@@ -34,7 +34,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity pick_an_arrow is
     Port (       game_clock : in  STD_LOGIC;
 	            obst_in : in   STD_LOGIC;
-	                 nb: out  STD_LOGIC_VECTOR(1 downto 0);
+	                 --nb: out  STD_LOGIC_VECTOR(1 downto 0);
 		  sequences : out  STD_LOGIC_VECTOR(11 downto 0);
               obst_arrow_up : out  STD_LOGIC;
             obst_arrow_down : out  STD_LOGIC;
@@ -121,7 +121,7 @@ begin
 	   lfsr_next (15 downto 1) <= lfsr (14 downto 0);
 	   lfsr_next (0) <= lfsr(15) xor lfsr(5);
 	end process lfsr_comb;
-   nb <= arrow_nb;
+ --  nb <= arrow_nb;
 end Behavioral;
 
 
